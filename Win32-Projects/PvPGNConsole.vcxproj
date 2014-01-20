@@ -1,0 +1,450 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{300F80E0-1A0E-4639-AEB9-18A692FF35F3}</ProjectGuid>
+    <RootNamespace>PvPGNConsole</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <UseOfAtl>false</UseOfAtl>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">..\obj\$(ProjectName)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\bin\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">..\obj\$(ProjectName)_debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>../src;$(SolutionDir)/..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_CONSOLE;_MBCS;WITH_SQL_MYSQL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsC</CompileAs>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>ws2_32.lib libmySQL.lib %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)PvPGNConsole.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\src\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+      <OmitFramePointers>false</OmitFramePointers>
+      <AdditionalIncludeDirectories>../src;$(SolutionDir)/..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_CONSOLE;_MBCS;WITH_SQL_MYSQL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <StructMemberAlignment>1Byte</StructMemberAlignment>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level1</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+      <CompileAs>CompileAsC</CompileAs>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+    </ClCompile>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>..\src\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>ws2_32.lib libmySQL.lib %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)PvPGNConsole.exe</OutputFile>
+      <AdditionalLibraryDirectories>..\src\win32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\bnetd\account.c" />
+    <ClCompile Include="..\src\bnetd\account_wrap.c" />
+    <ClCompile Include="..\src\bnetd\adbanner.c" />
+    <ClCompile Include="..\src\bnetd\alias_command.c" />
+    <ClCompile Include="..\src\bnetd\anongame.c" />
+    <ClCompile Include="..\src\bnetd\anongame_gameresult.c" />
+    <ClCompile Include="..\src\bnetd\anongame_infos.c" />
+    <ClCompile Include="..\src\bnetd\anongame_maplists.c" />
+    <ClCompile Include="..\src\bnetd\attrgroup.c" />
+    <ClCompile Include="..\src\bnetd\attrlayer.c" />
+    <ClCompile Include="..\src\bnetd\autoupdate.c" />
+    <ClCompile Include="..\src\bnetd\bnetd_log.c" />
+    <ClCompile Include="..\src\bnetd\channel.c" />
+    <ClCompile Include="..\src\bnetd\channel_conv.c" />
+    <ClCompile Include="..\src\bnetd\character.c" />
+    <ClCompile Include="..\src\bnetd\clan.c" />
+    <ClCompile Include="..\src\bnetd\cmdline.c" />
+    <ClCompile Include="..\src\bnetd\command.c" />
+    <ClCompile Include="..\src\bnetd\command_groups.c" />
+    <ClCompile Include="..\src\bnetd\connection.c" />
+    <ClCompile Include="..\src\bnetd\file.c" />
+    <ClCompile Include="..\src\bnetd\file_cdb.c" />
+    <ClCompile Include="..\src\bnetd\file_plain.c" />
+    <ClCompile Include="..\src\bnetd\friends.c" />
+    <ClCompile Include="..\src\bnetd\game.c" />
+    <ClCompile Include="..\src\bnetd\game_conv.c" />
+    <ClCompile Include="..\src\bnetd\handle_anongame.c" />
+    <ClCompile Include="..\src\bnetd\handle_bnet.c" />
+    <ClCompile Include="..\src\bnetd\handle_bot.c" />
+    <ClCompile Include="..\src\bnetd\handle_d2cs.c" />
+    <ClCompile Include="..\src\bnetd\handle_file.c" />
+    <ClCompile Include="..\src\bnetd\handle_init.c" />
+    <ClCompile Include="..\src\bnetd\handle_irc.c" />
+    <ClCompile Include="..\src\bnetd\handle_telnet.c" />
+    <ClCompile Include="..\src\bnetd\handle_udp.c" />
+    <ClCompile Include="..\src\bnetd\helpfile.c" />
+    <ClCompile Include="..\src\bnetd\ipban.c" />
+    <ClCompile Include="..\src\bnetd\irc.c" />
+    <ClCompile Include="..\src\bnetd\ladder.c" />
+    <ClCompile Include="..\src\bnetd\ladder_binary.c" />
+    <ClCompile Include="..\src\bnetd\ladder_calc.c" />
+    <ClCompile Include="..\src\bnetd\mail.c" />
+    <ClCompile Include="..\src\bnetd\main.c" />
+    <ClCompile Include="..\src\bnetd\message.c" />
+    <ClCompile Include="..\src\bnetd\news.c" />
+    <ClCompile Include="..\src\bnetd\output.c" />
+    <ClCompile Include="..\src\bnetd\prefs.c" />
+    <ClCompile Include="..\src\bnetd\realm.c" />
+    <ClCompile Include="..\src\bnetd\runprog.c" />
+    <ClCompile Include="..\src\bnetd\server.c" />
+    <ClCompile Include="..\src\bnetd\sql_common.c" />
+    <ClCompile Include="..\src\bnetd\sql_dbcreator.c" />
+    <ClCompile Include="..\src\bnetd\sql_mysql.c" />
+    <ClCompile Include="..\src\bnetd\sql_odbc.c" />
+    <ClCompile Include="..\src\bnetd\sql_pgsql.c" />
+    <ClCompile Include="..\src\bnetd\sql_sqlite3.c" />
+    <ClCompile Include="..\src\bnetd\storage.c" />
+    <ClCompile Include="..\src\bnetd\storage_file.c" />
+    <ClCompile Include="..\src\bnetd\storage_sql.c" />
+    <ClCompile Include="..\src\bnetd\storage_sql2.c" />
+    <ClCompile Include="..\src\bnetd\support.c" />
+    <ClCompile Include="..\src\bnetd\team.c" />
+    <ClCompile Include="..\src\bnetd\tick.c" />
+    <ClCompile Include="..\src\bnetd\timer.c" />
+    <ClCompile Include="..\src\bnetd\topic.c" />
+    <ClCompile Include="..\src\bnetd\tournament.c" />
+    <ClCompile Include="..\src\bnetd\tracker.c" />
+    <ClCompile Include="..\src\bnetd\udptest_send.c" />
+    <ClCompile Include="..\src\bnetd\versioncheck.c" />
+    <ClCompile Include="..\src\bnetd\watch.c" />
+    <ClCompile Include="..\src\common\addr.c" />
+    <ClCompile Include="..\src\common\bn_type.c" />
+    <ClCompile Include="..\src\common\bnethash.c" />
+    <ClCompile Include="..\src\common\bnethashconv.c" />
+    <ClCompile Include="..\src\common\bnettime.c" />
+    <ClCompile Include="..\src\common\conf.c" />
+    <ClCompile Include="..\src\common\d2char_checksum.c" />
+    <ClCompile Include="..\src\common\eventlog.c" />
+    <ClCompile Include="..\src\common\fdwatch.c" />
+    <ClCompile Include="..\src\common\fdwatch_epoll.c" />
+    <ClCompile Include="..\src\common\fdwatch_iocp.c" />
+    <ClCompile Include="..\src\common\fdwatch_kqueue.c" />
+    <ClCompile Include="..\src\common\fdwatch_poll.c" />
+    <ClCompile Include="..\src\common\fdwatch_select.c" />
+    <ClCompile Include="..\src\common\give_up_root_privileges.c" />
+    <ClCompile Include="..\src\common\hashtable.c" />
+    <ClCompile Include="..\src\common\hexdump.c" />
+    <ClCompile Include="..\src\common\list.c" />
+    <ClCompile Include="..\src\common\network.c" />
+    <ClCompile Include="..\src\common\packet.c" />
+    <ClCompile Include="..\src\common\proginfo.c" />
+    <ClCompile Include="..\src\common\queue.c" />
+    <ClCompile Include="..\src\common\rcm.c" />
+    <ClCompile Include="..\src\common\rlimit.c" />
+    <ClCompile Include="..\src\common\tag.c" />
+    <ClCompile Include="..\src\common\token.c" />
+    <ClCompile Include="..\src\common\trans.c" />
+    <ClCompile Include="..\src\common\util.c" />
+    <ClCompile Include="..\src\common\xalloc.c" />
+    <ClCompile Include="..\src\common\xstr.c" />
+    <ClCompile Include="..\src\common\xstring.c" />
+    <ClCompile Include="..\src\compat\difftime.c" />
+    <ClCompile Include="..\src\compat\getopt.c" />
+    <ClCompile Include="..\src\compat\gettimeofday.c" />
+    <ClCompile Include="..\src\compat\inet_aton.c" />
+    <ClCompile Include="..\src\compat\inet_ntoa.c" />
+    <ClCompile Include="..\src\compat\memcpy.c" />
+    <ClCompile Include="..\src\compat\memmove.c" />
+    <ClCompile Include="..\src\compat\memset.c" />
+    <ClCompile Include="..\src\compat\mmap.c" />
+    <ClCompile Include="..\src\compat\pdir.c" />
+    <ClCompile Include="..\src\compat\psock.c" />
+    <ClCompile Include="..\src\compat\strcasecmp.c" />
+    <ClCompile Include="..\src\compat\strdup.c" />
+    <ClCompile Include="..\src\compat\strerror.c" />
+    <ClCompile Include="..\src\compat\strftime.c" />
+    <ClCompile Include="..\src\compat\strncasecmp.c" />
+    <ClCompile Include="..\src\compat\strsep.c" />
+    <ClCompile Include="..\src\compat\strtoul.c" />
+    <ClCompile Include="..\src\compat\uname.c" />
+    <ClCompile Include="..\src\win32\service.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_find.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_findnext.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_hash.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_init.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_make.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_make_add.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_make_find.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_make_put.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_seek.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_seq.c" />
+    <ClCompile Include="..\src\tinycdb\cdb_unpack.c" />
+    <ClCompile Include="..\src\zlib\pvpgn_adler32.c" />
+    <ClCompile Include="..\src\zlib\pvpgn_deflate.c" />
+    <ClCompile Include="..\src\zlib\pvpgn_trees.c" />
+    <ClCompile Include="..\src\zlib\pvpgn_zutil.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\common\fdwatch_iocp.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="..\src\bnetd\account.h" />
+    <ClInclude Include="..\src\bnetd\account_wrap.h" />
+    <ClInclude Include="..\src\bnetd\adbanner.h" />
+    <ClInclude Include="..\src\bnetd\alias_command.h" />
+    <ClInclude Include="..\src\bnetd\anongame.h" />
+    <ClInclude Include="..\src\bnetd\anongame_gameresult.h" />
+    <ClInclude Include="..\src\bnetd\anongame_infos.h" />
+    <ClInclude Include="..\src\bnetd\anongame_maplists.h" />
+    <ClInclude Include="..\src\bnetd\attr.h" />
+    <ClInclude Include="..\src\bnetd\attrgroup.h" />
+    <ClInclude Include="..\src\bnetd\attrlayer.h" />
+    <ClInclude Include="..\src\bnetd\autoupdate.h" />
+    <ClInclude Include="..\src\bnetd\bnetd_log.h" />
+    <ClInclude Include="..\src\bnetd\channel.h" />
+    <ClInclude Include="..\src\bnetd\channel_conv.h" />
+    <ClInclude Include="..\src\bnetd\character.h" />
+    <ClInclude Include="..\src\bnetd\clan.h" />
+    <ClInclude Include="..\src\bnetd\cmdline.h" />
+    <ClInclude Include="..\src\bnetd\command.h" />
+    <ClInclude Include="..\src\bnetd\command_groups.h" />
+    <ClInclude Include="..\src\bnetd\connection.h" />
+    <ClInclude Include="..\src\bnetd\file.h" />
+    <ClInclude Include="..\src\bnetd\file_cdb.h" />
+    <ClInclude Include="..\src\bnetd\file_plain.h" />
+    <ClInclude Include="..\src\bnetd\friends.h" />
+    <ClInclude Include="..\src\bnetd\game.h" />
+    <ClInclude Include="..\src\bnetd\game_conv.h" />
+    <ClInclude Include="..\src\bnetd\handle_anongame.h" />
+    <ClInclude Include="..\src\bnetd\handle_bnet.h" />
+    <ClInclude Include="..\src\bnetd\handle_bot.h" />
+    <ClInclude Include="..\src\bnetd\handle_d2cs.h" />
+    <ClInclude Include="..\src\bnetd\handle_file.h" />
+    <ClInclude Include="..\src\bnetd\handle_init.h" />
+    <ClInclude Include="..\src\bnetd\handle_irc.h" />
+    <ClInclude Include="..\src\bnetd\handle_telnet.h" />
+    <ClInclude Include="..\src\bnetd\handle_udp.h" />
+    <ClInclude Include="..\src\bnetd\handlers.h" />
+    <ClInclude Include="..\src\bnetd\helpfile.h" />
+    <ClInclude Include="..\src\bnetd\ipban.h" />
+    <ClInclude Include="..\src\bnetd\irc.h" />
+    <ClInclude Include="..\src\bnetd\ladder.h" />
+    <ClInclude Include="..\src\bnetd\ladder_binary.h" />
+    <ClInclude Include="..\src\bnetd\ladder_calc.h" />
+    <ClInclude Include="..\src\bnetd\mail.h" />
+    <ClInclude Include="..\src\bnetd\message.h" />
+    <ClInclude Include="..\src\bnetd\news.h" />
+    <ClInclude Include="..\src\bnetd\output.h" />
+    <ClInclude Include="..\src\bnetd\prefs.h" />
+    <ClInclude Include="..\src\bnetd\quota.h" />
+    <ClInclude Include="..\src\bnetd\realm.h" />
+    <ClInclude Include="..\src\bnetd\runprog.h" />
+    <ClInclude Include="..\src\bnetd\server.h" />
+    <ClInclude Include="..\src\bnetd\sql_common.h" />
+    <ClInclude Include="..\src\bnetd\sql_dbcreator.h" />
+    <ClInclude Include="..\src\bnetd\sql_mysql.h" />
+    <ClInclude Include="..\src\bnetd\sql_odbc.h" />
+    <ClInclude Include="..\src\bnetd\sql_pgsql.h" />
+    <ClInclude Include="..\src\bnetd\sql_sqlite3.h" />
+    <ClInclude Include="..\src\bnetd\storage.h" />
+    <ClInclude Include="..\src\bnetd\storage_file.h" />
+    <ClInclude Include="..\src\bnetd\storage_sql.h" />
+    <ClInclude Include="..\src\bnetd\storage_sql2.h" />
+    <ClInclude Include="..\src\bnetd\support.h" />
+    <ClInclude Include="..\src\bnetd\team.h" />
+    <ClInclude Include="..\src\bnetd\tick.h" />
+    <ClInclude Include="..\src\bnetd\timer.h" />
+    <ClInclude Include="..\src\bnetd\topic.h" />
+    <ClInclude Include="..\src\bnetd\tournament.h" />
+    <ClInclude Include="..\src\bnetd\udptest_send.h" />
+    <ClInclude Include="..\src\bnetd\versioncheck.h" />
+    <ClInclude Include="..\src\bnetd\watch.h" />
+    <ClInclude Include="..\src\common\addr.h" />
+    <ClInclude Include="..\src\common\anongame_protocol.h" />
+    <ClInclude Include="..\src\common\auth_protocol.h" />
+    <ClInclude Include="..\src\common\bn_type.h" />
+    <ClInclude Include="..\src\common\bnet_protocol.h" />
+    <ClInclude Include="..\src\common\bnethash.h" />
+    <ClInclude Include="..\src\common\bnethashconv.h" />
+    <ClInclude Include="..\src\common\bnettime.h" />
+    <ClInclude Include="..\src\common\bot_protocol.h" />
+    <ClInclude Include="..\src\common\cdbhash.h" />
+    <ClInclude Include="..\src\common\conf.h" />
+    <ClInclude Include="..\src\common\d2char_checksum.h" />
+    <ClInclude Include="..\src\common\d2char_file.h" />
+    <ClInclude Include="..\src\common\d2game_protocol.h" />
+    <ClInclude Include="..\src\common\elist.h" />
+    <ClInclude Include="..\src\common\eventlog.h" />
+    <ClInclude Include="..\src\common\fdwatch.h" />
+    <ClInclude Include="..\src\common\fdwatch_epoll.h" />
+    <ClInclude Include="..\src\common\fdwatch_kqueue.h" />
+    <ClInclude Include="..\src\common\fdwatch_poll.h" />
+    <ClInclude Include="..\src\common\fdwatch_select.h" />
+    <ClInclude Include="..\src\common\field_sizes.h" />
+    <ClInclude Include="..\src\common\file_protocol.h" />
+    <ClInclude Include="..\src\common\flags.h" />
+    <ClInclude Include="..\src\common\give_up_root_privileges.h" />
+    <ClInclude Include="..\src\common\hashtable.h" />
+    <ClInclude Include="..\src\common\hexdump.h" />
+    <ClInclude Include="..\src\common\init_protocol.h" />
+    <ClInclude Include="..\src\common\introtate.h" />
+    <ClInclude Include="..\src\common\irc_protocol.h" />
+    <ClInclude Include="..\src\common\list.h" />
+    <ClInclude Include="..\src\common\lstr.h" />
+    <ClInclude Include="..\src\common\network.h" />
+    <ClInclude Include="..\src\common\packet.h" />
+    <ClInclude Include="..\src\common\proginfo.h" />
+    <ClInclude Include="..\src\common\queue.h" />
+    <ClInclude Include="..\src\common\rcm.h" />
+    <ClInclude Include="..\src\common\rlimit.h" />
+    <ClInclude Include="..\src\common\setup_after.h" />
+    <ClInclude Include="..\src\common\setup_before.h" />
+    <ClInclude Include="..\src\common\tag.h" />
+    <ClInclude Include="..\src\common\token.h" />
+    <ClInclude Include="..\src\common\tracker.h" />
+    <ClInclude Include="..\src\common\trans.h" />
+    <ClInclude Include="..\src\common\udp_protocol.h" />
+    <ClInclude Include="..\src\common\util.h" />
+    <ClInclude Include="..\src\common\version.h" />
+    <ClInclude Include="..\src\common\w3xp_protocol.h" />
+    <ClInclude Include="..\src\common\xalloc.h" />
+    <ClInclude Include="..\src\common\xstr.h" />
+    <ClInclude Include="..\src\common\xstring.h" />
+    <ClInclude Include="..\src\compat\access.h" />
+    <ClInclude Include="..\src\compat\char_bit.h" />
+    <ClInclude Include="..\src\compat\difftime.h" />
+    <ClInclude Include="..\src\compat\exitstatus.h" />
+    <ClInclude Include="..\src\compat\gethostname.h" />
+    <ClInclude Include="..\src\compat\getopt.h" />
+    <ClInclude Include="..\src\compat\gettimeofday.h" />
+    <ClInclude Include="..\src\compat\inet_aton.h" />
+    <ClInclude Include="..\src\compat\inet_ntoa.h" />
+    <ClInclude Include="..\src\compat\memcpy.h" />
+    <ClInclude Include="..\src\compat\memmove.h" />
+    <ClInclude Include="..\src\compat\memset.h" />
+    <ClInclude Include="..\src\compat\mkdir.h" />
+    <ClInclude Include="..\src\compat\mmap.h" />
+    <ClInclude Include="..\src\compat\netinet_in.h" />
+    <ClInclude Include="..\src\compat\pdir.h" />
+    <ClInclude Include="..\src\compat\psock.h" />
+    <ClInclude Include="..\src\compat\read.h" />
+    <ClInclude Include="..\src\compat\recv.h" />
+    <ClInclude Include="..\src\compat\seek.h" />
+    <ClInclude Include="..\src\compat\send.h" />
+    <ClInclude Include="..\src\compat\signal.h" />
+    <ClInclude Include="..\src\compat\socket.h" />
+    <ClInclude Include="..\src\compat\statmacros.h" />
+    <ClInclude Include="..\src\compat\stdfileno.h" />
+    <ClInclude Include="..\src\compat\strcasecmp.h" />
+    <ClInclude Include="..\src\compat\strchr.h" />
+    <ClInclude Include="..\src\compat\strdup.h" />
+    <ClInclude Include="..\src\compat\strerror.h" />
+    <ClInclude Include="..\src\compat\strftime.h" />
+    <ClInclude Include="..\src\compat\strncasecmp.h" />
+    <ClInclude Include="..\src\compat\strrchr.h" />
+    <ClInclude Include="..\src\compat\strsep.h" />
+    <ClInclude Include="..\src\compat\strtoul.h" />
+    <ClInclude Include="..\src\compat\termios.h" />
+    <ClInclude Include="..\src\compat\uint.h" />
+    <ClInclude Include="..\src\compat\uname.h" />
+    <ClInclude Include="..\src\win32\service.h" />
+    <ClInclude Include="..\src\tinycdb\cdb_int.h" />
+    <ClInclude Include="..\src\zlib\pvpgn_deflate.h" />
+    <ClInclude Include="..\src\zlib\pvpgn_trees.h" />
+    <ClInclude Include="..\src\zlib\pvpgn_zconf.h" />
+    <ClInclude Include="..\src\zlib\pvpgn_zlib.h" />
+    <ClInclude Include="..\src\zlib\pvpgn_zutil.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\win32\console_resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\win32\logo01.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

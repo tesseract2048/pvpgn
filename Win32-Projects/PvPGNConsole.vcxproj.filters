@@ -1,0 +1,979 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{9134e707-269f-4536-a729-dc7f5d2f9fac}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Source Files\bnetd">
+      <UniqueIdentifier>{a7e0c5bd-adae-4f80-ac2f-a2c09b2db947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\common">
+      <UniqueIdentifier>{e52b7a56-02a0-4fd4-9afc-7f20bb627ed4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\compat">
+      <UniqueIdentifier>{d97bdeb9-cd3d-4008-8ea3-d03eb6518d4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\win32">
+      <UniqueIdentifier>{96468b27-8d4c-409a-9e59-7d5909ea0f63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tinycdb">
+      <UniqueIdentifier>{9f29722a-09ac-4474-9331-bb9247d1969b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\zlib">
+      <UniqueIdentifier>{b66b6636-aaf2-4edf-a9fd-baab848dcfb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{9d6f4bde-faf2-4609-89b9-a5fc8478d28b}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Header Files\bnetd">
+      <UniqueIdentifier>{f8dead7f-ae50-4e69-ad61-6067264574a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\common">
+      <UniqueIdentifier>{9fc1d660-ac80-44aa-8d6d-f3220e716f6b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\compat">
+      <UniqueIdentifier>{07ae1605-0828-42c3-adcd-7824fd4fc633}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\win32">
+      <UniqueIdentifier>{8ca740c4-628e-4660-8442-19071ccda1f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\tinycdb">
+      <UniqueIdentifier>{fd33e8d5-d8e4-4cc4-8332-15b87e3edb8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\zlib">
+      <UniqueIdentifier>{4c4877e9-cebe-473c-b50a-73c04b3f086d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{05860aad-133f-40b8-8dca-35f227e86d27}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\bnetd\account.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\account_wrap.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\adbanner.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\alias_command.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\anongame.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\anongame_gameresult.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\anongame_infos.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\anongame_maplists.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\attrgroup.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\attrlayer.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\autoupdate.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\bnetd_log.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\channel.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\channel_conv.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\character.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\clan.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\cmdline.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\command.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\command_groups.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\connection.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\file.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\file_cdb.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\file_plain.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\friends.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\game.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\game_conv.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\handle_anongame.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\handle_bnet.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\handle_bot.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\handle_d2cs.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\handle_file.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\handle_init.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\handle_irc.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\handle_telnet.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\handle_udp.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\helpfile.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\ipban.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\irc.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\ladder.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\ladder_binary.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\ladder_calc.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\mail.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\main.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\message.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\news.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\output.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\prefs.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\realm.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\runprog.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\server.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\sql_common.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\sql_dbcreator.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\sql_mysql.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\sql_odbc.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\sql_pgsql.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\sql_sqlite3.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\storage.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\storage_file.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\storage_sql.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\storage_sql2.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\support.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\team.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\tick.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\timer.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\topic.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\tournament.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\tracker.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\udptest_send.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\versioncheck.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\bnetd\watch.c">
+      <Filter>Source Files\bnetd</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\addr.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\bn_type.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\bnethash.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\bnethashconv.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\bnettime.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\conf.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\d2char_checksum.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\eventlog.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\fdwatch.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\fdwatch_epoll.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\fdwatch_kqueue.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\fdwatch_poll.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\fdwatch_select.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\give_up_root_privileges.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\hashtable.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\hexdump.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\list.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\network.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\packet.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\proginfo.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\queue.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\rcm.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\rlimit.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\tag.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\token.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\trans.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\util.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\xalloc.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\xstr.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\xstring.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\difftime.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\getopt.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\gettimeofday.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\inet_aton.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\inet_ntoa.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\memcpy.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\memmove.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\memset.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\mmap.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\pdir.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\psock.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\strcasecmp.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\strdup.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\strerror.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\strftime.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\strncasecmp.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\strsep.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\strtoul.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\compat\uname.c">
+      <Filter>Source Files\compat</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\win32\service.c">
+      <Filter>Source Files\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_find.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_findnext.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_hash.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_init.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_make.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_make_add.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_make_find.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_make_put.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_seek.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_seq.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\tinycdb\cdb_unpack.c">
+      <Filter>Source Files\tinycdb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\zlib\pvpgn_adler32.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\zlib\pvpgn_deflate.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\zlib\pvpgn_trees.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\zlib\pvpgn_zutil.c">
+      <Filter>Source Files\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\common\fdwatch_iocp.c">
+      <Filter>Source Files\common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource1.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\account.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\account_wrap.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\adbanner.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\alias_command.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\anongame.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\anongame_gameresult.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\anongame_infos.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\anongame_maplists.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\attr.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\attrgroup.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\attrlayer.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\autoupdate.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\bnetd_log.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\channel.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\channel_conv.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\character.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\clan.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\cmdline.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\command.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\command_groups.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\connection.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\file.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\file_cdb.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\file_plain.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\friends.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\game.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\game_conv.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\handle_anongame.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\handle_bnet.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\handle_bot.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\handle_d2cs.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\handle_file.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\handle_init.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\handle_irc.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\handle_telnet.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\handle_udp.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\handlers.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\helpfile.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\ipban.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\irc.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\ladder.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\ladder_binary.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\ladder_calc.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\mail.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\message.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\news.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\output.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\prefs.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\quota.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\realm.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\runprog.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\server.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\sql_common.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\sql_dbcreator.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\sql_mysql.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\sql_odbc.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\sql_pgsql.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\sql_sqlite3.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\storage.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\storage_file.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\storage_sql.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\storage_sql2.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\support.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\team.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\tick.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\timer.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\topic.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\tournament.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\udptest_send.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\versioncheck.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\bnetd\watch.h">
+      <Filter>Header Files\bnetd</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\addr.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\anongame_protocol.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\auth_protocol.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\bn_type.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\bnet_protocol.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\bnethash.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\bnethashconv.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\bnettime.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\bot_protocol.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\cdbhash.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\conf.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\d2char_checksum.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\d2char_file.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\d2game_protocol.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\elist.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\eventlog.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\fdwatch.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\fdwatch_epoll.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\fdwatch_kqueue.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\fdwatch_poll.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\fdwatch_select.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\field_sizes.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\file_protocol.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\flags.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\give_up_root_privileges.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\hashtable.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\hexdump.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\init_protocol.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\introtate.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\irc_protocol.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\list.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\lstr.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\network.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\packet.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\proginfo.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\queue.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\rcm.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\rlimit.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\setup_after.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\setup_before.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\tag.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\token.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\tracker.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\trans.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\udp_protocol.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\util.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\version.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\w3xp_protocol.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\xalloc.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\xstr.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\xstring.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\access.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\char_bit.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\difftime.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\exitstatus.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\gethostname.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\getopt.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\gettimeofday.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\inet_aton.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\inet_ntoa.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\memcpy.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\memmove.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\memset.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\mkdir.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\mmap.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\netinet_in.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\pdir.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\psock.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\read.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\recv.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\seek.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\send.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\signal.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\socket.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\statmacros.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\stdfileno.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\strcasecmp.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\strchr.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\strdup.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\strerror.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\strftime.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\strncasecmp.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\strrchr.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\strsep.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\strtoul.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\termios.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\uint.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\compat\uname.h">
+      <Filter>Header Files\compat</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\win32\service.h">
+      <Filter>Header Files\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\tinycdb\cdb_int.h">
+      <Filter>Header Files\tinycdb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\zlib\pvpgn_deflate.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\zlib\pvpgn_trees.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\zlib\pvpgn_zconf.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\zlib\pvpgn_zlib.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\zlib\pvpgn_zutil.h">
+      <Filter>Header Files\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\common\fdwatch_iocp.h">
+      <Filter>Header Files\common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\win32\console_resource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\win32\logo01.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
