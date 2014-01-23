@@ -1729,7 +1729,7 @@ extern int main(int argc, char * argv[])
 	    if (PSOCK_FD_ISSET(client.sd,&rfds)) /* got network data */
 	    {
 		/* rpacket is from server, packet is from client */
-		switch (net_recv_packet(client.sd,rpacket,&client.currsize))
+		switch (net_recv_packet(0,client.sd,rpacket,&client.currsize))
 		{
 		case 0: /* nothing */
 		    break;

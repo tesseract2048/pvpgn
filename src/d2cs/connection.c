@@ -325,7 +325,7 @@ static int conn_handle_read(t_connection * c)
 		c->insize=0;
 	}
 
-	switch (net_recv_packet(c->sock,packet,&c->insize)) {
+	switch (net_recv_packet(c->fdw_idx,c->sock,packet,&c->insize)) {
 		case -1:
 			retval=-1;
 			break;
@@ -356,7 +356,7 @@ static int conn_handle_write(t_connection * c)
 
 	if (!(packet=conn_peek_outqueue(c))) return 0;
 
-	switch (net_send_packet(c->sock, packet, &c->outsize)) {
+	switch (net_send_packet(c->fdw_idx,c->sock, packet, &c->outsize)) {
 		case -1:
 			retval=-1;
 			break;

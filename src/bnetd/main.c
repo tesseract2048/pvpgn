@@ -96,17 +96,21 @@
 #endif
 #include "cmdline.h"
 #include "common/setup_after.h"
+#ifdef WIN32
 #include <windows.h>
 #include <dbghelp.h>
+#endif
 
+#ifdef WIN32
 #pragma comment(lib, "dbghelp.lib")
+static LONG WINAPI except_handler(PEXCEPTION_POINTERS lpEP);
+#endif
 
 /* out of memory safety */
 #define OOM_SAFE_MEM	1000000		/* 1 Mbyte of safety memory */
 
 void *oom_buffer = NULL;
 
-static LONG WINAPI except_handler(PEXCEPTION_POINTERS lpEP);
 
 static int bnetd_oom_handler(void)
 {
@@ -469,7 +473,9 @@ extern int main(int argc, char * * argv)
     if ((a = cmdline_load(argc, argv)) != 1)
 	return a;
 	
+#ifdef WIN32
 	SetUnhandledExceptionFilter(except_handler);
+#endif
 
 #ifdef DO_DAEMONIZE
     if ((a = fork_bnetd(cmdline_get_foreground())) != 0)
@@ -545,6 +551,7 @@ extern int main(int argc, char * * argv)
 }
 
 
+#ifdef WIN32
 void dump_callstack( CONTEXT *context )
 {
     STACKFRAME sf;
@@ -624,3 +631,4 @@ static LONG WINAPI except_handler(PEXCEPTION_POINTERS lpEP)
 	ExitProcess(0);
 	return EXCEPTION_EXECUTE_HANDLER;
 }
+#endif

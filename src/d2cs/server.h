@@ -20,12 +20,8 @@
 
 #include "common/fdwatch.h"
 
-extern int d2cs_helper_query(char*);
 extern int d2cs_server_process(void);
 extern int d2cs_server_handle_tcp(void*,t_fdwatch_type);
 extern int d2cs_server_handle_accept(void*,t_fdwatch_type);
-extern void set_helper_query(DWORD);
-
-typedef int (*HELPER_QUERY)(char*);
 
 #endif

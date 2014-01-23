@@ -268,7 +268,7 @@ extern void conn_test_latency(t_connection * c, time_t now, t_timer_data delta);
 extern char const * conn_class_get_str(t_conn_class class) ;
 extern char const * conn_state_get_str(t_conn_state state) ;
 
-extern t_connection * conn_create(int tsock, int usock, unsigned int real_local_addr, unsigned short real_local_port, unsigned int local_addr, unsigned short local_port, unsigned int addr, unsigned short port) ;
+extern t_connection * conn_create(int tsock, int usock, unsigned int real_local_addr, unsigned short real_local_port, unsigned int local_addr, unsigned short local_port, unsigned int addr, unsigned short port, char mirror) ;
 extern void conn_destroy(t_connection * c, t_elem ** elem, int conn_or_dead_list);
 extern int conn_match(t_connection const * c, char const * user);
 extern t_conn_class conn_get_class(t_connection const * c) ;
@@ -467,8 +467,8 @@ extern unsigned int conn_antibot_greet(t_connection * c);
 extern unsigned int conn_auth_greet(t_connection * c, int result);
 extern char conn_get_mirror(t_connection * c);
 extern void conn_set_mirror(t_connection * c, char mirror);
-extern void conn_set_addr(t_connection const * c, unsigned int addr);
-extern void conn_set_port(t_connection const * c, unsigned short port);
+extern void conn_set_addr(t_connection * c, unsigned int addr);
+extern void conn_set_port(t_connection * c, unsigned short port);
 
 #endif
 #endif

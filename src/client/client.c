@@ -58,7 +58,7 @@ extern int client_blocksend_packet(int sock, t_packet const * packet)
     unsigned int size=0;
     
     for (;;)
-        switch (net_send_packet(sock,packet,&size))
+        switch (net_send_packet(0,sock,packet,&size))
 	{
 	case -1:
 	    return -1;
@@ -77,7 +77,7 @@ extern int client_blockrecv_packet(int sock, t_packet * packet)
     unsigned int size=0;
     
     for (;;)
-        switch (net_recv_packet(sock,packet,&size))
+        switch (net_recv_packet(0,sock,packet,&size))
         {
         case -1:
             return -1;
@@ -98,7 +98,7 @@ extern int client_blockrecv_raw_packet(int sock, t_packet * packet, unsigned int
     
     packet_set_size(packet,len);
     for (;;)
-        switch (net_recv_packet(sock,packet,&size))
+        switch (net_recv_packet(0,sock,packet,&size))
         {
         case -1:
             return -1;

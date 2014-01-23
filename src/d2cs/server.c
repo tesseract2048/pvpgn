@@ -352,15 +352,3 @@ extern int d2cs_server_process(void)
 	server_cleanup();
 	return 0;
 }
-
-static HELPER_QUERY helper_query;
-
-extern int d2cs_helper_query(char* ipaddr)
-{
-	return helper_query(ipaddr);
-}
-
-extern void set_helper_query(DWORD addr)
-{
-	helper_query = addr;
-}

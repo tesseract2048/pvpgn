@@ -51,7 +51,6 @@ SRC_SCRIPTDIR	= @srcdir@/../scripts
 SRC_ACDIR	= ${SRC_SRCDIR}/autoconf
 SRC_BNETDDIR	= ${SRC_SRCDIR}/bnetd
 SRC_D2CSDIR     = ${SRC_SRCDIR}/d2cs
-SRC_D2DBSDIR    = ${SRC_SRCDIR}/d2dbs
 SRC_BNIUTILSDIR	= ${SRC_SRCDIR}/bniutils
 SRC_BNPASSDIR	= ${SRC_SRCDIR}/bnpass
 SRC_BNTRACKDDIR	= ${SRC_SRCDIR}/bntrackd
@@ -78,13 +77,13 @@ INSTALL_DIRS	= @INSTALL@ -d -m 755
 
 # CC set by configure
 # CFLAGS set by configure
-CPPFLAGS	= @DEFS@ @DEFINES@ -DBNETD_DEFAULT_CONF_FILE=\"${confdir}/bnetd.conf\" -DD2CS_DEFAULT_CONF_FILE=\"${confdir}/d2cs.conf\" -DD2DBS_DEFAULT_CONF_FILE=\"${confdir}/d2dbs.conf\" -I"${SRC_SRCDIR}" @CPPFLAGS@
+CPPFLAGS	= @DEFS@ @DEFINES@ -DBNETD_DEFAULT_CONF_FILE=\"${confdir}/bnetd.conf\" -DD2CS_DEFAULT_CONF_FILE=\"${confdir}/d2cs.conf\" -I"${SRC_SRCDIR}" @CPPFLAGS@
 COMPILE		= @CC@ @CFLAGS@ ${CPPFLAGS} -fno-strict-aliasing -c
 #PREPROCESS	= @CPP@ ${CPPFLAGS}
 LINK		= @CC@ @CFLAGS@ @LDFLAGS@
 LINK_LIBS	= @LIBS@
 
-PARTS            = bnetd bniutils bnpass bnpcap bnproxy bntrackd client common compat d2cs d2dbs tinycdb zlib
+PARTS            = bnetd bniutils bnpass bnpcap bnproxy bntrackd client common compat d2cs tinycdb zlib
 
 ifeq (@enable_bnetd@,no)
 bnetd_SBIN	=
@@ -168,6 +167,7 @@ ${SRC_BNETDDIR}/support.o \
 ${SRC_BNETDDIR}/attrgroup.o \
 ${SRC_BNETDDIR}/attrlayer.o \
 ${SRC_BNETDDIR}/cmdline.o \
+${SRC_BNETDDIR}/bnetd_log.o \
 ${SRC_COMMONDIR}/tag.o \
 ${SRC_COMMONDIR}/hexdump.o \
 ${SRC_COMMONDIR}/bn_type.o \
@@ -296,39 +296,6 @@ ${SRC_COMPATDIR}/pdir.o \
 ${SRC_COMPATDIR}/memset.o \
 ${SRC_COMPATDIR}/memcpy.o \
 ${SRC_COMPATDIR}/memmove.o
-endif
-
-ifeq (@enable_d2dbs@,no)
-d2dbs_SBIN	=
-d2dbs_CONFS	=
-d2dbs_OBJECTS	=
-else
-d2dbs_SBIN      = ${SRC_SBINDIR}/d2dbs
-d2dbs_CONFS	= d2dbs.conf
-d2dbs_OBJECTS	= ${SRC_D2DBSDIR}/main.o \
-${SRC_D2DBSDIR}/charlock.o \
-${SRC_D2DBSDIR}/d2ladder.o \
-${SRC_D2DBSDIR}/dbserver.o \
-${SRC_D2DBSDIR}/dbspacket.o \
-${SRC_D2DBSDIR}/cmdline.o \
-${SRC_D2DBSDIR}/prefs.o \
-${SRC_D2DBSDIR}/handle_signal.o \
-${SRC_D2DBSDIR}/dbsdupecheck.o \
-${SRC_COMMONDIR}/xstring.o \
-${SRC_COMMONDIR}/conf.o \
-${SRC_COMMONDIR}/list.o \
-${SRC_COMMONDIR}/eventlog.o \
-${SRC_COMMONDIR}/hexdump.o \
-${SRC_COMMONDIR}/bn_type.o \
-${SRC_COMMONDIR}/util.o \
-${SRC_COMMONDIR}/addr.o \
-${SRC_COMMONDIR}/d2char_checksum.o \
-${SRC_COMMONDIR}/xalloc.o \
-${SRC_COMMONDIR}/network.o \
-${SRC_COMMONDIR}/packet.o \
-${SRC_COMPATDIR}/psock.o \
-${SRC_COMPATDIR}/strerror.o \
-${SRC_COMPATDIR}/strsep.o
 endif
 
 sbnetd_SBIN	= ${SRC_SBINDIR}/sbnetd
@@ -527,13 +494,13 @@ ${SRC_COMMONDIR}/xalloc.o \
 ${SRC_COMPATDIR}/mmap.o \
 ${SRC_COMPATDIR}/getopt.o
 
-OBJECTS		= ${bnetd_OBJECTS} ${d2cs_OBJECTS} ${d2dbs_OBJECTS} ${bntrackd_OBJECTS} ${bnchat_OBJECTS} ${bnpass_OBJECTS} ${bnbot_OBJECTS} ${bnftp_OBJECTS} ${bnstat_OBJECTS} ${bnilist_OBJECTS} ${bni2tga_OBJECTS} ${bniextract_OBJECTS} ${bnibuild_OBJECTS} ${tgainfo_OBJECTS} ${timetest_OBJECTS} ${listtest_OBJECTS} ${hashtabletest_OBJECTS} ${addrtest_OBJECTS} ${cdb_OBJECTS}
-SBINS           = ${bnetd_SBIN} ${bntrackd_SBIN} ${d2cs_SBIN} ${d2dbs_SBIN}
+OBJECTS		= ${bnetd_OBJECTS} ${d2cs_OBJECTS} ${bntrackd_OBJECTS} ${bnchat_OBJECTS} ${bnpass_OBJECTS} ${bnbot_OBJECTS} ${bnftp_OBJECTS} ${bnstat_OBJECTS} ${bnilist_OBJECTS} ${bni2tga_OBJECTS} ${bniextract_OBJECTS} ${bnibuild_OBJECTS} ${tgainfo_OBJECTS} ${timetest_OBJECTS} ${listtest_OBJECTS} ${hashtabletest_OBJECTS} ${addrtest_OBJECTS} ${cdb_OBJECTS}
+SBINS           = ${bnetd_SBIN} ${bntrackd_SBIN} ${d2cs_SBIN}
 BINS            = ${bnchat_BIN} ${bnpass_BIN} ${bnftp_BIN} ${bnbot_BIN} ${bnstat_BIN} ${bnilist_BIN} ${bni2tga_BIN} ${bniextract_BIN} ${bnibuild_BIN} ${tgainfo_BIN} ${cdb_BIN}
 MAN1S		= bnetd.1 bntrackd.1 bnchat.1 bnpass.1 bnbot.1 bnftp.1 bnstat.1 bnetd.1 bni2tga.1 bnibuild.1 bniextract.1 bnilist.1 tgainfo.1
 MAN5S		= bnetd.conf.5 bntext.5 bnmotd.txt.5 bnissue.txt.5 bnnews.txt.5
 
-CONFS		= ${bnetd_CONFS} ${d2cs_CONFS} ${d2dbs_CONFS}
+CONFS		= ${bnetd_CONFS} ${d2cs_CONFS}
 
 SHARES		= ad000001.smk ad000001.mng ad000004.mng \
 		  tos.txt \
@@ -551,7 +518,7 @@ DIRS		= ${SRC_BINDIR} ${SRC_SBINDIR}
 
 
 .PHONY: all
-all: .dep @ANSI2KNR_DEP@ config ${SBINS} ${BINS} ${SRC_CONFDIR}/bnetd.conf ${SRC_CONFDIR}/d2cs.conf ${SRC_CONFDIR}/d2dbs.conf
+all: .dep @ANSI2KNR_DEP@ config ${SBINS} ${BINS} ${SRC_CONFDIR}/bnetd.conf ${SRC_CONFDIR}/d2cs.conf
 
 .PHONY: clean
 clean:
@@ -565,7 +532,6 @@ clean:
 distclean: clean
 	-${RMF} ${SRC_CONFDIR}/bnetd.conf
 	-${RMF} ${SRC_CONFDIR}/d2cs.conf
-	-${RMF} ${SRC_CONFDIR}/d2dbs.conf
 	-${RMF} ${SRC_SRCDIR}/config.cache ${SRC_SRCDIR}/config.log
 	-${RMF} ${SRC_SRCDIR}/config.status
 	-${RMF} ${SRC_SRCDIR}/Makefile ${SRC_SRCDIR}/config.h
@@ -669,7 +635,7 @@ install-man:
 	done
 
 .PHONY: install-conf
-install-conf: ${SRC_CONFDIR}/bnetd.conf ${SRC_CONFDIR}/d2cs.conf ${SRC_CONFDIR}/d2dbs.conf
+install-conf: ${SRC_CONFDIR}/bnetd.conf ${SRC_CONFDIR}/d2cs.conf
 	${INSTALL_DIRS} ${DESTDIR}/${confdir}
 	@list='${CONFS}'; for p in $$list; do \
 	  if test -f ${SRC_CONFDIR}/$$p; then \
@@ -743,10 +709,6 @@ ${SRC_CONFDIR}/d2cs.conf: ${SRC_CONFDIR}/d2cs.conf.in ${SRC_SRCDIR}/config.statu
 	@${RMF} $@
 	${SED} -e "s@/usr/local/var/@${sharedir}/@g" -e "s@/usr/local/etc/@${confdir}/@g" ${SRC_CONFDIR}/d2cs.conf.in > $@
 
-${SRC_CONFDIR}/d2dbs.conf: ${SRC_CONFDIR}/d2dbs.conf.in ${SRC_SRCDIR}/config.status
-	@${RMF} $@
-	${SED} -e "s@/usr/local/var/@${sharedir}/@g" -e "s@/usr/local/etc/@${confdir}/@g" ${SRC_CONFDIR}/d2dbs.conf.in > $@
-
 ${SRC_ACDIR}/ansi2knr: ${SRC_ACDIR}/ansi2knr.o
 	@${RMF} $@
 	${LINK} ${SRC_ACDIR}/ansi2knr.o ${LINK_LIBS} -o $@
@@ -788,12 +750,6 @@ ${d2cs_SBIN}: SHOWHEADER ${d2cs_OBJECTS}
 	@${RMF} $@
 	@echo "Linking $@"
 	@${LINK} ${d2cs_OBJECTS} ${LINK_LIBS} -o $@
-
-${d2dbs_SBIN}: SHOWHEADER ${d2dbs_OBJECTS}
-	@${INSTALL_DIRS} ${SRC_SBINDIR}
-	@${RMF} $@
-	@echo "Linking $@"
-	@${LINK} ${d2dbs_OBJECTS} ${LINK_LIBS} -o $@
 
 ${sbnetd_SBIN}: SHOWHEADER ${sbnetd_OBJECTS}
 	@${INSTALL_DIRS} ${SRC_SBINDIR}

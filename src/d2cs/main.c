@@ -70,8 +70,6 @@
 #endif
 #include "common/setup_after.h"
 
-#include "windows.h"
-
 char serviceLongName[] = "d2cs service";
 char serviceName[] = "d2cs";
 char serviceDescription[] = "Diablo 2 Character Server";
@@ -152,13 +150,6 @@ static char * write_to_pidfile(void)
 
 static int init(void)
 {
-	if(prefs_get_trans_gs())
-	{
-		DWORD helper = LoadLibraryA("d2cs_helper.dll");
-		FARPROC init_helper = GetProcAddress(helper, "init_helper");
-		set_helper_query(GetProcAddress(helper, "query"));
-		init_helper();
-	}
 	d2cs_connlist_create();
 	d2cs_gamelist_create();
 	sqlist_create();
@@ -174,12 +165,6 @@ static int init(void)
 
 static int cleanup(void)
 {
-	if(prefs_get_trans_gs())
-	{
-		DWORD helper = LoadLibraryA("d2cs_helper.dll");
-		FARPROC cleanup_helper = GetProcAddress(helper, "cleanup_helper");
-		cleanup_helper();
-	}
 	d2ladder_destroy();
 	d2cs_connlist_destroy();
 	d2cs_gamelist_destroy();

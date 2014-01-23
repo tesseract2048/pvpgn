@@ -1680,7 +1680,6 @@ static int _handle_sysw_command(t_connection * c, char const *text)
   do_sysw(c,dest,&text[i]);
   return 0;
 }
-message_send_text(c,message_type_info,c,msgtemp);
 static int _handle_status_command(t_connection * c, char const *text)
 {
     char ctag[5];

@@ -3459,7 +3459,7 @@ static int conf_setdef_wol_latitude(void)
 }
 
 
-extern int prefs_get_vip_experience(void)
+extern unsigned int prefs_get_vip_experience(void)
 {
 	return prefs_runtime_config.vip_experience;
 }

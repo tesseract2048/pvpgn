@@ -303,7 +303,7 @@ extern int main(int argc, char * argv[])
 	    {
 		packet_set_size(rpacket,MAX_PACKET_SIZE-1);
 		currsize = 0;
-		if (net_recv_packet(sd,rpacket,&currsize)<0)
+		if (net_recv_packet(0,sd,rpacket,&currsize)<0)
 		{
 		    psock_close(sd);
 		    sd = -1;

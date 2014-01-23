@@ -956,7 +956,6 @@ extern void conn_set_addr(t_connection * c, unsigned int addr)
     if (!c)
     {
         eventlog(eventlog_level_error,__FUNCTION__,"got NULL connection");
-        return 0;
     }
     
     c->socket.tcp_addr = addr;
@@ -969,7 +968,6 @@ extern void conn_set_port(t_connection * c, unsigned short port)
     if (!c)
     {
         eventlog(eventlog_level_error,__FUNCTION__,"got NULL connection");
-        return 0;
     }
     
     c->socket.tcp_port = port;
@@ -3333,7 +3331,7 @@ extern t_elist * conn_get_timer(t_connection *c)
     return &c->protocol.timers;
 }
 
-extern int conn_get_fdw_idx(t_connection * const c)
+extern int conn_get_fdw_idx(t_connection const * c)
 {
 	return c->socket.fdw_idx;
 }
@@ -4019,7 +4017,7 @@ extern char const * conn_wol_get_game_options(t_connection * c)
     return c->protocol.wol.gameOptions;
 }
 
-extern char conn_get_mirror(t_connection const * c)
+extern char conn_get_mirror(t_connection * c)
 {
     if (!c)
     {
@@ -4035,7 +4033,6 @@ extern void conn_set_mirror(t_connection * c, char mirror)
     if (!c)
     {
 		eventlog(eventlog_level_error,__FUNCTION__,"got NULL conn");
-		return NULL;
     }
 
     c->socket.mirror = mirror;

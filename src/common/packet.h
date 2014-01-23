@@ -242,6 +242,7 @@ typedef struct
         t_d2gs_d2cs_echoreply           d2gs_d2cs_echoreply;
 	t_d2cs_d2gs_control             d2cs_d2gs_control;
 	t_d2cs_d2gs_setconffile			d2cs_d2gs_setconffile;
+        t_d2cs_d2gs_operate            d2cs_d2gs_operate;
 
         t_d2cs_client_generic           d2cs_client;
         t_client_d2cs_loginreq          client_d2cs_loginreq;

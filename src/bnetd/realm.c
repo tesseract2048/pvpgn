@@ -60,7 +60,7 @@
 
 static t_list * realmlist_head=NULL;
 
-static t_realm * realm_create(char const * name, char const * description, unsigned int ip, unsigned int port, unsigned int vip_realm);
+static t_realm * realm_create(char const * name, char const * description, unsigned int ip, unsigned int port, unsigned int vip_realm, unsigned int realm_version);
 static int realm_destroy(t_realm * realm);
 static unsigned int realm_number = 0;
 

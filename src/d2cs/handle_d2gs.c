@@ -425,35 +425,6 @@ static int on_d2gs_joingamereply(t_connection * c, t_packet * packet)
 			gsport = 4000;
 			trans_net(d2cs_conn_get_addr(client), &gsaddr, &gsport);
 
-			if(prefs_get_trans_gs())
-			{
-				t_addr *addr_out;
-				const char* translist;
-				char newip[32];
-				int t;
-				int tmp = 0;
-				query_group = d2cs_helper_query(addr_num_to_ip_str(d2cs_conn_get_addr(client)));
-				if(query_group == 1)
-				{
-					translist = prefs_get_gs_cnc();
-				}else{
-					translist = prefs_get_gs_ctc();
-				}
-				strncpy(newip, &translist[gs->id * 16], 16);
-				for (t = 0; t < 16; t ++)
-				{
-					if (newip[t] == ',')
-					{
-						newip[t] = 0;
-						break;
-					}
-				}
-				newip[15] = 0;
-				addr_out = addr_create_str(newip, 0, 0);
-				gsaddr = addr_get_ip(addr_out);
-				addr_destroy(addr_out);
-				eventlog(eventlog_level_trace,__FUNCTION__,"%s net group %d, gs translated to %s", addr_num_to_ip_str(d2cs_conn_get_addr(client)), query_group, addr_num_to_ip_str(gsaddr));
-			}
 			if(d2gs_get_ip(gs)!=gsaddr)
 			{
 			    eventlog(eventlog_level_info,__FUNCTION__,"translated gameserver %s -> %s",addr_num_to_ip_str(d2gs_get_ip(gs)),addr_num_to_ip_str(gsaddr));

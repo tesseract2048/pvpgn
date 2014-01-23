@@ -110,6 +110,7 @@
 #include "common/lstr.h"
 #include "common/setup_after.h"
 #include "bnetd_log.h"
+#include "time.h"
 
 extern int last_news;
 extern int first_news;
@@ -4907,7 +4908,7 @@ static int _s2s_operate(t_connection * c, t_packet const *const packet)
     t_hash       passhash;
     t_account  * temp;
 	int offset = sizeof(t_s2s_operate);
-	struct tm d;
+	struct tm  * d;
 	int daynum;
 	t_connection * dest_c;
 	char buf[255];
@@ -5014,15 +5015,15 @@ static int _s2s_operate(t_connection * c, t_packet const *const packet)
 			vip_expire = account_get_auth_vip_expire(temp);
 			if(vip_expire < time(NULL)) vip_expire = time(NULL);
 			int_extend = atoi(vip_extend);
-			localtime_s(&d, &vip_expire);
-			d.tm_mon += int_extend;
-			while(d.tm_mon > 11){
-				d.tm_year ++;
-				d.tm_mon -= 12;
+			d = localtime(&vip_expire);
+			d->tm_mon += int_extend;
+			while(d->tm_mon > 11){
+				d->tm_year ++;
+				d->tm_mon -= 12;
 			}
-			daynum = GetDaysInMonth(d.tm_year, d.tm_mon);
-			if(daynum < d.tm_mday) d.tm_mday = daynum;
-			vip_expire = mktime(&d);
+			daynum = GetDaysInMonth(d->tm_year, d->tm_mon);
+			if(daynum < d->tm_mday) d->tm_mday = daynum;
+			vip_expire = mktime(d);
 			account_set_auth_vip_expire(temp,vip_expire);
 			bn_short_set(&reply->u.s2s_operate_reply.result, S2S_OPERATE_REPLY_SUCC);
 			sprintf(buf, "%d,%d", int_extend, vip_expire);
@@ -5043,7 +5044,7 @@ static int _s2s_operate(t_connection * c, t_packet const *const packet)
 				break;
 			}
 			acct_email = account_get_email(temp);
-			if(email != NULL && acct_email != NULL && strcmpi(email, acct_email) == 0){
+			if(email != NULL && acct_email != NULL && strcmp(email, acct_email) == 0){
 				bn_short_set(&reply->u.s2s_operate_reply.result, S2S_OPERATE_REPLY_SUCC);
 			}else{
 				bn_short_set(&reply->u.s2s_operate_reply.result, S2S_OPERATE_REPLY_INCORRECT);
@@ -5112,7 +5113,7 @@ static int _s2s_sys_ann(t_connection * c, t_packet const *const packet)
 		bn_byte_set(&cpacket->u.bnetd_d2cs_operate.opt, 2);
 		packet_append_string(cpacket,packet_get_str_const(packet, sizeof(t_s2s_sys_ann), 512));
 	}else{
-		return;
+		return -1;
 	}
 	LIST_TRAVERSE_CONST(realmlist(), curr) {
 	    realm = elem_get_data(curr);

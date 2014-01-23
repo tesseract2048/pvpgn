@@ -130,7 +130,7 @@ extern unsigned int conn_get_charinfo_class(t_connection const * c);
 extern unsigned int conn_get_d2gs_id(t_connection const * c);
 extern int conn_set_d2gs_id(t_connection * c, unsigned int d2gs_id);
 extern unsigned int d2cs_conn_get_addr(t_connection const * c);
-extern int d2cs_conn_set_addr(t_connection const * c, unsigned int addr);
+extern int d2cs_conn_set_addr(t_connection * c, unsigned int addr);
 extern unsigned short d2cs_conn_get_port(t_connection const * c);
 extern t_gq * conn_get_gamequeue(t_connection const * c);
 extern int conn_set_gamequeue(t_connection * c, t_gq * gq);
